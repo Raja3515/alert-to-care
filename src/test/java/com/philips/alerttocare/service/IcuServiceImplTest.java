@@ -13,7 +13,6 @@ import org.mockito.MockitoAnnotations;
 import com.philips.alerttocare.entity.Icu;
 import com.philips.alerttocare.model.AddIcuModel;
 import com.philips.alerttocare.repository.IcuRepository;
-import com.philips.alerttocare.service.IcuServiceImpl;
 
 public class IcuServiceImplTest {
 	
