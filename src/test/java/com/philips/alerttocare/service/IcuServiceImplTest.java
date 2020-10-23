@@ -1,4 +1,4 @@
-package com.philips.alerttocare.servicetest;
+package com.philips.alerttocare.service;
 
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
