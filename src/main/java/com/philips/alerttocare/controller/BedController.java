@@ -1,5 +1,7 @@
 package com.philips.alerttocare.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +16,14 @@ import com.philips.alerttocare.service.BedService;
 @RequestMapping(value = "/bed-mgmt")
 public class BedController {
 	
+	private final static Logger LOGGER=LoggerFactory.getLogger(BedController.class);
+	
 	@Autowired
 	private BedService bedService;
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/bed")
-	public ApiResponse addIcu(@RequestBody AddBedModel addBedModel) {
+	public ApiResponse addBed(@RequestBody AddBedModel addBedModel) {
+		LOGGER.info("====addBed start===");
 		return bedService.saveBed(addBedModel);
 	}
 }
